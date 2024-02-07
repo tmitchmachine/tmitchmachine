@@ -19,15 +19,5 @@ Creation of a portfolio containing projects, introduction and contact details wi
 8. `flask run`
 
 
-
-## Vercel website URL:
-https://portfolio-dorothea-reher-doridoro.vercel.app/
-
-
-### Used HTML/CSS Free Template:
-this template does not exist anymore but the template is from:
-http://www.mashup-template.com/preview.html?template=univers
-
-(first deployment on Heroku)
-
-
+## website URL:
+https://mitchdeal.com
