@@ -1,10 +1,6 @@
 # Portfolio - Python Application
 
 
-## Description:
-Creation of a portfolio containing projects, introduction and contact details with contact form. The portfolio is deployed on Vercel.
-
-
 ## Installation process:
 
 1. `clone he project: https://github.com/DoriDoro/portfolio_dorothea-reher.git`
