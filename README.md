@@ -8,7 +8,7 @@ Creation of a portfolio containing projects, introduction and contact details wi
 ## Installation process:
 
 1. `clone he project: https://github.com/DoriDoro/portfolio_dorothea-reher.git`
-2. `cd portfolio_dorothea-reher`
+2. `cd mitch_deal`
  
 3. `python3 -m venv venv`
 4. `. venv/bin/activate` on MacOS and Linux `venv\Scripts\activate` on Windows
