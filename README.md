@@ -3,7 +3,7 @@
 
 ## Installation process:
 
-1. `clone he project: https://github.com/DoriDoro/portfolio_dorothea-reher.git`
+1. `clone he project from https://github.com/tmitch777/mitch_deal.git`
 2. `cd mitch_deal`
  
 3. `python3 -m venv venv`
