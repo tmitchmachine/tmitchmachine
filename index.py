@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, redirect
 import csv
-
+import os
 
 app = Flask(__name__, static_folder='public/static')
 
@@ -13,16 +13,6 @@ def my_home():
 def html_page(page_name):
     return render_template(page_name)
 
-# contact form deactivated:
-# create a text file to store the contact form data:
-def write_to_file(data): # create a function which is writing the data of the contact form into file: database.txt
-    with open('database.txt', mode='a') as database:  # file is already existing
-        email = data['email'] # grap the data 'email' of the dictionary 'data'
-        subject = data['subject']
-        message = data['message']
-        file = database.write(f'\n{email}, {subject}, {message}') 
-
-
 # create a csv file to store the contact form data:
 def write_to_csv(data):
     with open('database.csv', mode='a') as database_csv:
@@ -30,19 +20,23 @@ def write_to_csv(data):
         subject = data['subject']
         message = data['message']
         csv_file = csv.writer(database_csv, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)  
-            # csv.writer(name_of_database, options: delimiter=',' means is separating every value with a comma, 
-            # quotechar='"' means quotes around the values)
-        csv_file.writerow([email,subject,message]) # writerow will contain the data we want 
+        csv_file.writerow([email,subject,message]) 
 
-
-@app.route('/submit_form', methods=['POST', 'GET'])
+@app.route('/submit_form', methods=['POST'])
 def submit_form():
     if request.method == 'POST':
         try:
-            data = request.form.to_dict()  # grap the data from the sent form and convert it into a dictionary
+            data = request.form.to_dict()  
             write_to_csv(data)
             return redirect('/thankyou.html')
-        except:
+        except Exception as e:
+            print(e)
             return 'did not save to database'
     else:
-        return 'something went wrong, try it again'
+        return 'Method Not Allowed'
+
+if __name__ == "__main__":
+    # Use the PORT environment variable to listen on the correct port
+    port = int(os.environ.get("PORT", 8080))
+    app.run(host='0.0.0.0', port=port)
+
