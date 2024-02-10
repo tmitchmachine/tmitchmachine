@@ -1,0 +1,11 @@
+runtime: python39
+
+service: test2
+
+entrypoint: gunicorn -b :$PORT orgnetsetos.wsgi
+
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcr.io/mitch-deal/mitchdealimage', '.']
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args: ['run', 'deploy', 'mitchdeal', '--image', 'gcr.io/mitche-deal/mitchdealimage', '--platform', 'managed', '--region', 'us-central1']
