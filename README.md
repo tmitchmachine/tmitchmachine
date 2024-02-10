@@ -14,9 +14,32 @@
 7. `export FLASK_ENV=development`
 8. `flask run`
 
-# Deployment 
+# Builds
 1. `gcloud builds submit --tag gcr.io/mitch-deal/mitchdealimage:latest --timeout=40 mitch_deal`
-2. 
+
+# Docker image setup
+0.`docker login`
+1. `docker tag mitchdealimage:v1 gcr.io/mitch-deal/mitchdealimage:v1`
+2. `gcloud auth configure-docker`
+3. `docker push gcr.io/mitch-deal/mitchdealimage:v1`
+4. `gcloud run deploy mitchdeal-service --image gcr.io/mitch-deal/mitchdealimage:v1 --platform managed --region YOUR_REGION`
+
+
+2. `docker build -t mitchdealimage:v1 .`
+3. `docker push mitchdealimage:v1`
+
+
+
+# Authenticate Docker with your Google Cloud credentials
+4. `gcloud auth configure-docker`
+
+# Tag the Docker image with the GCR repository URL
+5. `docker tag mitchdealimage:v1 us-central1-docker.pkg.dev/mitch-deal/mitchdealimage:v1`
+
+# Push the tagged Docker image to GCR
+6. `docker push us-central1-docker.pkg.dev/mitch-deal/mitchdealimage:v1`
+
+
 
 
 ## website URL:
