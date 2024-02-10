@@ -14,6 +14,10 @@
 7. `export FLASK_ENV=development`
 8. `flask run`
 
+# Deployment 
+1. `gcloud builds submit --tag gcr.io/mitch-deal/mitchdealimage:latest --timeout=40 mitch_deal`
+2. 
+
 
 ## website URL:
 https://mitchdeal.com
