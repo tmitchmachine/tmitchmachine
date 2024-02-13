@@ -1,3 +1,16 @@
+runtime: python312
+
+service: test2
+
+entrypoint: gunicorn -b :$PORT orgnetsetos.wsgi
+
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcr.io/mitch-deal/mitchdealimage', '.']
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args: ['run', 'deploy', 'mitchdeal', '--image', 'gcr.io/mitche-deal/mitchdealimage', '--platform', 'managed', '--region', 'us-central1']
+
+
 runtime: python38
 entrypoint: gunicorn -b :$PORT main:app
 
@@ -11,4 +24,34 @@ handlers:
 # # service: test2
 
 # # entrypoint: gunicorn -b :$PORT orgnetsetos.wsgi
+
+cloud.yaml
+
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcr.io/mitch-deal/mitchdealimage', '.']
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args: ['run', 'deploy', 'mitchdeal', '--image', 'gcr.io//mitchdealimage', '--platform', 'managed', '--region', 'us-central1']
+
+cloudbuild.yaml
+steps:
+  # Install dependencies
+  - name: 'python:3.8'
+    entrypoint: 'pip'
+    args: ['install', '-r', 'requirements.txt']
+
+  # Build and deploy the Flask app
+  - name: 'gcr.io/cloud-builders/gcloud'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - |
+        gcloud app deploy app.yaml
+
+app.yamlruntime: python38
+# entrypoint: gunicorn -b :$PORT main:app
+
+# handlers:
+# - url: /.*
+#   script: auto
 
