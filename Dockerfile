@@ -5,7 +5,7 @@ FROM python:3.9-slim
 ENV PYTHONUNBUFFERED True
 
 # Set the working directory in the container
-WORKDIR /app
+WORKDIR / main
 
 # Copy the current directory contents into the container at /app
 COPY . .

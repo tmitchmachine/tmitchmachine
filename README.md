@@ -1,6 +1,3 @@
-# Website
-
-
 ## Installation process:
 
 1. `clone he project from https://github.com/tmitch777/mitch_deal.git`
@@ -10,9 +7,31 @@
 4. `. venv/bin/activate` on MacOS and Linux `venv\Scripts\activate` on Windows
 5. `pip install -r requirements.txt`
  
-6. `export FLASK_APP=index`
+6. `export FLASK_APP=main`
 7. `export FLASK_ENV=development`
 8. `flask run`
+
+## Pre Deployment
+1. `python -V` to see version inside /app.yaml and convert it Python 3.12.1 = runtime: python310
+2. `pip freeze > requirements.txt` make sure sure .txt is correct  
+
+## Deployment Official
+1. `export FLASK_APP=main`
+2. `export FLASK_ENV=production`
+3. `gcloud app deploy`
+
+# Installing Google Cloud
+https://cloud.google.com/sdk/docs/install
+
+# Video Deployment Reference
+https://www.youtube.com/watch?v=_OqxXjiASDI
+
+## website URL:
+https://mitchdeal.com
+
+
+
+<!-- Everything below no longer used
 
 #Deployment From GCP
 1. `git clone https://github.com/tmitch777/mitch_deal`
@@ -58,9 +77,4 @@ https://mitchdeal-service-iw27pgmcoq-uc.a.run.app
 
 # Push the tagged Docker image to GCR
 6. `docker push us-central1-docker.pkg.dev/mitch-deal/mitchdealimage:v1`
-
-
-
-
-## website URL:
-https://mitchdeal.com
+ -->
