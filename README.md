@@ -18,7 +18,8 @@
 ## Deployment Official
 1. `export FLASK_APP=main`
 2. `export FLASK_ENV=production`
-3. `gcloud app deploy`
+3. `gcloud init`
+4. `gcloud app deploy`
 
 # Installing Google Cloud
 https://cloud.google.com/sdk/docs/install
