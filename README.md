@@ -1,6 +1,6 @@
 ## Installation process:
 
-1. `clone he project from https://github.com/tmitch777/mitch_deal.git`
+1. `clone he project from https://github.com/tmitchmachine/mitch_deal.git`
 2. `cd mitch_deal`
  
 3. `python3 -m venv venv`
