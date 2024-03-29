@@ -19,6 +19,7 @@
 1. `export FLASK_APP=main`
 2. `export FLASK_ENV=production`
 3. `gcloud init`
+4. `gcloud projects create mitch-deal`
 4. `gcloud app deploy`
 
 # Installing Google Cloud
