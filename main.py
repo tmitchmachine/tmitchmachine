@@ -6,7 +6,7 @@ app = Flask(__name__, static_folder='public/static')
 
 @app.route("/")
 def my_home():
-    return render_template('index.html')
+    return render_template('home')
 
 # create dynamic routes:
 @app.route("/<string:page_name>")

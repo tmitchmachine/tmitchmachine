@@ -39,16 +39,16 @@
 
         <div class="collapse navbar-collapse" id="navbar-collapse">
           <ul class="nav navbar-nav ">
-            <li><a href="./index.html" title="">01 : Home</a></li>
-            <li><a href="./deals.html" title="">02 : Deals</a></li>
-            <li><a href="./about.html" title="">03 : About</a></li>
-            <li><a href="./contact.html" title="">04 : Contact</a></li>
+            <li><a href="./home" title="">01 : Home</a></li>
+            <li><a href="./deals" title="">02 : Deals</a></li>
+            <li><a href="./about" title="">03 : About</a></li>
+            <li><a href="./contact" title="">04 : Contact</a></li>
           </ul>
 
           <ul class="nav navbar-nav navbar-right navbar-small visible-md visible-lg">
-            <li><a href="./deals001.html" title="" class="active">001</a></li>
-            <li><a href="./deals002.html" title="">002</a></li>
-            <!-- <li><a href="./deals.html" title="">003</a></li> -->
+            <li><a href="./deals001." title="" class="active">001</a></li>
+            <li><a href="./deals002" title="">002</a></li>
+            <!-- <li><a href="./deals" title="">003</a></li> -->
         </div>
       </div>
     </nav>
