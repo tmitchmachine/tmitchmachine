@@ -67,7 +67,7 @@
               <div class="item active">
                 <div class="row">
                   <div class="col-sm-4">
-                    <a href="./deals001.html" title="" class="black-image-project-hover">
+                    <a href="./deals001" title="" class="black-image-project-hover">
                       <img src="./static/assets/images/work01-hover.jpg" alt="" class="img-responsive">
                     </a>
                     <div class="card-container card-container-lg">
@@ -80,7 +80,7 @@
                   </div>
 
                   <div class="col-sm-4">
-                    <a href="./deals002.html" title="" class="black-image-project-hover">
+                    <a href="./deals002" title="" class="black-image-project-hover">
                       <img src="./static/assets/images/work02-hover.jpg" alt="" class="img-responsive">
                     </a>
                     <div class="card-container card-container-lg">
@@ -92,7 +92,7 @@
                   </div>
 
                   <div class="col-sm-4">
-                    <a href="./deals003.html" title="" class="black-image-project-hover">
+                    <a href="./deals003" title="" class="black-image-project-hover">
                       <img src="./static/assets/images/jet.jpg" alt="" class="img-responsive">
                     </a>
                     <div class="card-container card-container-lg">
@@ -104,7 +104,7 @@
                   </div>
                   <!-- 
                 <div class="col-sm-4">
-                  <a href="./deals003.html" title="" class="black-image-project-hover">
+                  <a href="./deals004" title="" class="black-image-project-hover">
                     <img src="./static/assets/images/jet.jpg" alt="" class="img-responsive">
                   </a>
                   <div class="card-container card-container-lg">
