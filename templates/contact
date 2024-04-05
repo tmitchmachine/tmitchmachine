@@ -90,13 +90,13 @@
             </span>
             <a href="mailto:contact@newlivingstyle.com">contact@newlivingstyle.com</a>
           </li>
-          <li>
+          <!-- <li>
             <span class="fa-icon">
               <i class="fa fa fa-map-marker" aria-hidden="true"></i>
             </span>
             380 Hamilton Ave # 1699,
             Palo Alto CA 94301 USA
-          </li>
+          </li> -->
           </ul>
           <!-- <h3>Social Links Below</h3>
             <a href="https://www.linkedin.com/in/travis-mitchell-tmitchmachine" title="" class="fa-icon"
