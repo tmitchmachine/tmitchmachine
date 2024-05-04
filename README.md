@@ -1,7 +1,7 @@
 ## Installation process:
 
 1. `clone he project from https://github.com/tmitchmachine/mitch_deal.git`
-2. `cd mitch_deal`
+2. `cd tmitchmachine`
  
 3. `python3 -m venv venv`
 4. `. venv/bin/activate` on MacOS and Linux `venv\Scripts\activate` on Windows
@@ -28,7 +28,7 @@ https://cloud.google.com/sdk/docs/install
 https://www.youtube.com/watch?v=_OqxXjiASDI
 
 ## website URL:
-https://mitchdeal.com
+https://tmitchmachine.com
 
 
 ## Creating A Project
