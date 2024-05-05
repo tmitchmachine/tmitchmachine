@@ -56,8 +56,8 @@
       <div class="row">
         <div class="col-sm-8 col-sm-offset-2 section-container-spacer">
           <div class="text-center">
-            <h1 class="h2">02 : Deals</h1>
-            <p>Here is some of the deals.</p>
+            <h1 class="h2">03 : Events</h1>
+            <p>Public Speaking Engagements</p>
           </div>
         </div>
 
@@ -69,41 +69,29 @@
               <div class="item active">
                 <div class="row">
                   <div class="col-sm-4">
-                    <a href="./deals001" title="" class="black-image-project-hover">
+                    <a href="./events001" title="" class="black-image-project-hover">
                       <img src="./static/assets/images/work01-hover.jpg" alt="" class="img-responsive">
                     </a>
                     <div class="card-container card-container-lg">
-                      <h4> August 2023 </h4>
-                      <h3> Katy Perry Deal </h3>
-                      <p> Helped the parent company of New Living Style sign a distribution deal to carry Katy Perry
-                        Footwear Collections. </p>
-                      <a href="./deals001" title="" class="btn btn-default">Discover</a>
+                      <h4> July 22nd 2023 </h4>
+                      <h3> Fresh Fire Conference </h3>
+                      <p> Spoke at Salvation Army sharing the mission behind Heavenya.</p>
+                      <a href="./events001" title="" class="btn btn-default">More</a>
                     </div>
                   </div>
 
-                  <div class="col-sm-4">
-                    <a href="./deals002" title="" class="black-image-project-hover">
+                  <!-- <div class="col-sm-4">
+                    <a href="./events002" title="" class="black-image-project-hover">
                       <img src="./static/assets/images/work02-hover.jpg" alt="" class="img-responsive">
                     </a>
                     <div class="card-container card-container-lg">
-                      <h4> In Progress </h4>
-                      <h3> Teywin Deal </h3>
-                      <p> Helping Teywin form the right influencer partnerships to grow their brand </p>
-                      <a href="./deals002" title="" class="btn btn-default">Discover</a>
+                      <h4> December 2023 </h4>
+                      <h3> Pitching Teywin </h3>
+                      <p> Pitched about a golf glove innovation </p>
+                      <a href="./events002" title="" class="btn btn-default">More</a>
                     </div>
-                  </div>
+                  </div> -->
 
-                  <div class="col-sm-4">
-                    <a href="./deals003" title="" class="black-image-project-hover">
-                      <img src="./static/assets/images/jet.jpg" alt="" class="img-responsive">
-                    </a>
-                    <div class="card-container card-container-lg">
-                      <h4> In Progress </h4>
-                      <h3> Jet Deal </h3>
-                      <p> Helping sell an upgraded jet plane</p>
-                      <a href="./deals003" title="" class="btn btn-default">Discover</a>
-                    </div>
-                  </div>
                   <!-- 
                 <div class="col-sm-4">
                   <a href="./deals004" title="" class="black-image-project-hover">
