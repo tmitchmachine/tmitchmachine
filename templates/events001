@@ -17,7 +17,7 @@
   <title>T Mitch Machine</title>
 
   <link href="./static/main.3f6952e4.css" rel="stylesheet">
-  <link rel="shortcut icon" href="./static/assets/images/fresh_fire.jpg">
+  <link rel="shortcut icon" href="./static/assets/images/verified.png">
 </head>
 
 <body class="">
@@ -48,8 +48,8 @@
           </ul>
 
           <ul class="nav navbar-nav navbar-right navbar-small visible-md visible-lg">
-            <li><a href="./deals001." title="" class="active">001</a></li>
-            <li><a href="./deals002" title="">002</a></li>
+            <li><a href="./events001." title="" class="active">001</a></li>
+            <li><a href="./events002" title="">002</a></li>
             <!-- <li><a href="./deals" title="">003</a></li> -->
         </div>
       </div>
@@ -63,24 +63,21 @@
           <img src="./static/assets/images/white-background.jpg" class="img-responsive" alt="">
           <div class="card-container">
             <div class="text-center">
-              <h1 class="h2"> 001 : Katy Perry Footwear Collections </h1>
+              <h1 class="h2"> 002 : Fresh Fire Conference </h1>
             </div>
             <br>
 
             <div class="text-center">
-              <h1 class="h3"> The Deal </h1>
+              <h1 class="h3"> The Event </h1>
             </div>
-            <p> Helped the parent company of <a href="https://newlivingstyle.com" target="_blank"> New Living Style</a>
-              sign a distribution deal to carry Katy Perry Footwear Collections. New Living Style is an seasonal trend
-              focused women's fashionc retail website. We secured the deal to enable New Living Style To make a step
-              toward working with personal brands.</p>
+            <p> Initially reached out to help promote the upcoming Fresh Fire conference through Heavenya. Was
+              offered the opportunity to speak and share more about the mission behind a tech nonprofit called Heavenya.
+              Shared about the founding story at Salvation Army in Stockton California.</p>
 
-            <p> To be clear Katy Perry Footer Collections is seperate from Katy Perry Music.</p>
-
-            <p> You can view more about the deal highlight at the link here <a
-                href="https://www.linkedin.com/posts/travis-mitchell-tmitch777_magictradeshow-lasvegasevents-activity-7096940350753161217-yTT1?utm_source=share&utm_medium=member_desktop"
+            <p> You can view more about the mission of Heavenya at the link here <a
+                href="https://www.youtube.com/watch?v=DemUFAtb_XI"
                 target="_blank">View
-                Post</a></p>
+                Video</a></p>
             <br>
 
 

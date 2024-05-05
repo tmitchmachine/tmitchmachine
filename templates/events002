@@ -48,8 +48,8 @@
           </ul>
 
           <ul class="nav navbar-nav navbar-right navbar-small visible-md visible-lg">
-            <li><a href="./deals001" title="" class="active">001</a></li>
-            <li><a href="./deals002" title="">002</a></li>
+            <li><a href="./events001" title="" class="active">001</a></li>
+            <li><a href="./events002" title="">002</a></li>
             <!-- <li><a href="./deals" title="">003</a></li> -->
         </div>
       </div>
