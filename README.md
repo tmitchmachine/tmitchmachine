@@ -11,9 +11,10 @@
 7. `export FLASK_ENV=development`
 8. `flask run`
 
-## Pre Deployment
-1. `python -V` to see version inside /app.yaml and convert it Python 3.12.1 = runtime: python310
-2. `pip freeze > requirements.txt` make sure sure .txt is correct  
+## Pre Deployment New Terminal
+1. `. venv/bin/activate` on MacOS and Linux `venv\Scripts\activate` on Windows
+2. `python -V` to see version inside /app.yaml and convert it Python 3.12.1 = runtime: python310
+3. `pip freeze > requirements.txt` make sure sure .txt is correct  
 
 ## Deployment Official
 1. `export FLASK_APP=main`
