@@ -14,7 +14,6 @@
 ## Pre Deployment New Terminal
 1. `. venv/bin/activate` on MacOS and Linux `venv\Scripts\activate` on Windows
 2. `python -V` to see version inside /app.yaml and convert it Python 3.12.1 = runtime: python310
-3. `pip freeze > requirements.txt` make sure sure .txt is correct  
 
 ## Deployment Official
 1. `export FLASK_APP=main`
@@ -35,7 +34,11 @@ https://tmitchmachine.com
 ## Creating A Project
 `gcloud projects create project name`
 
+
 <!-- Everything below no longer used
+
+## Pre Deployment New Terminal
+3. `pip freeze > requirements.txt` make sure sure .txt is correct  
 
 #Deployment From GCP
 1. `git clone https://github.com/tmitch777/mitch_deal`
