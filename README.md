@@ -21,6 +21,9 @@
 3. `gcloud init`
 4. `gcloud app deploy`
 
+## Optional If Slow Deployment
+1. `gcloud components update`
+
 # Installing Google Cloud
 https://cloud.google.com/sdk/docs/install
 
