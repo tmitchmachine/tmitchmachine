@@ -18,7 +18,7 @@
 ## Deployment Official
 1. `export FLASK_APP=main`
 2. `export FLASK_ENV=production`
-3. `gcloud init`
+3. `gcloud init` Select Switch to and re-initialize existing configuration: [default]
 4. `gcloud app deploy`
 
 ## Optional If Slow Deployment
