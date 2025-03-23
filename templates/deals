@@ -82,7 +82,7 @@
                     </div>
                   </div>
 
-                  <div class="col-sm-4">
+                  <!-- <div class="col-sm-4">
                     <a href="./deals002" title="" class="black-image-project-hover">
                       <img src="./static/assets/images/work02-hover.jpg" alt="" class="img-responsive">
                     </a>
@@ -92,7 +92,7 @@
                       <p> Helping Teywin close a retail deal to grow their brand </p>
                       <a href="./deals002" title="" class="btn btn-default">Discover</a>
                     </div>
-                  </div>
+                  </div> -->
 
                   <!-- <div class="col-sm-4">
                     <a href="./deals003" title="" class="black-image-project-hover">
