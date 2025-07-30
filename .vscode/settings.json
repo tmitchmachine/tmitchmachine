@@ -1,0 +1,50 @@
+{
+  // Installation and Deployment Instructions
+  // ===================================
+  
+  // Local Development Setup
+  // 1. Clone the project: git clone https://github.com/tmitchmachine/mitch_deal.git
+  // 2. Navigate to project: cd tmitchmachine
+  // 3. Create virtual environment: python3 -m venv venv
+  // 4. Activate environment:
+  //    - MacOS/Linux: . venv/bin/activate
+  //    - Windows: venv\Scripts\activate
+  // 5. Install dependencies: pip install -r requirements.txt
+  // 6. Set environment variables:
+  //    - export FLASK_APP=main
+  //    - export FLASK_ENV=development
+  // 7. Run the application: flask run
+
+  // Pre-Deployment Steps
+  // 1. Activate virtual environment (see step 4 above)
+  // 2. Verify Python version matches app.yaml configuration
+  //    - Example: Python 3.12.1 = runtime: python312 in app.yaml
+
+  // Production Deployment
+  // 1. Set environment to production:
+  //    - export FLASK_APP=main
+  //    - export FLASK_ENV=production
+  // 2. Initialize Google Cloud: gcloud init
+  //    - Select: Switch to and re-initialize existing configuration: [default]
+  // 3. Deploy: gcloud app deploy
+
+  // Optional: Update Google Cloud Components
+  // Run: gcloud components update
+
+  // Google Cloud SDK Installation
+  // https://cloud.google.com/sdk/docs/install
+
+  // Video Deployment Reference
+  // https://www.youtube.com/watch?v=_OqxXjiASDI
+
+  // Website URL: https://tmitchmachine.com
+
+  // To create a new project:
+  // gcloud projects create project-name
+
+  // VS Code specific settings can be added below
+  "python.pythonPath": "venv/bin/python",
+  "python.linting.enabled": true,
+  "python.formatting.provider": "black",
+  "editor.formatOnSave": true
+}
