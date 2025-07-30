@@ -4,10 +4,8 @@
 `FLASK_APP=main FLASK_ENV=development flask run`
 
 ## Deploying
-1. `export FLASK_APP=main`
-2. `export FLASK_ENV=production`
-3. `gcloud init` Select Switch to and re-initialize existing configuration: [default]
-4. `gcloud app deploy`
+`export FLASK_APP=main && export FLASK_ENV=production && gcloud init && gcloud app deploy`
+
 
 
 
