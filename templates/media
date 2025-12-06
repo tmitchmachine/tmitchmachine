@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <meta content="description" name="description">
+  <meta name="google" content="notranslate" />
+  <meta content="Mashup templates have been developped by Orson.io team" name="author">
+
+  <!-- Disable tap highlight on IE -->
+  <meta name="msapplication-tap-highlight" content="no">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="./static/assets/apple-icon-180x180.png">
+
+  <title>Media | T Mitch Machine</title>
+
+  <link href="./static/main.3f6952e4.css" rel="stylesheet">
+  <link rel="shortcut icon" href="./static/assets/images/verified.png">
+
+  <style>
+    /* Lightweight page-local styling for the media grid */
+    .media-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+      min-height: 180px;
+      padding: 24px 18px;
+      border: 1px solid #e5e5e5;
+      border-radius: 8px;
+      transition: all 0.2s ease;
+      background: #fff;
+      text-align: center;
+      gap: 8px;
+    }
+
+    .media-card:hover {
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+      transform: translateY(-4px);
+      text-decoration: none;
+    }
+
+    .media-icon {
+      font-size: 32px;
+      margin-bottom: 12px;
+      color: #222;
+    }
+
+    .media-card h4 {
+      margin: 8px 0;
+    }
+
+    .media-logo {
+      width: 32px;
+      height: 32px;
+      margin-bottom: 12px;
+      object-fit: contain;
+    }
+  </style>
+</head>
+
+<body class="">
+  <div id="site-border-left"></div>
+  <div id="site-border-right"></div>
+  <div id="site-border-top"></div>
+  <div id="site-border-bottom"></div>
+  <!-- Add your content of header -->
+  <header>
+    <nav class="navbar  navbar-fixed-top navbar-default">
+      <div class="container">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"
+          aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+          <ul class="nav navbar-nav ">
+            <li><a href="./home" title="">01 : Home</a></li>
+            <li><a href="./deals" title="">02 : Deals</a></li>
+            <li><a href="./events" title="">03 : Events</a></li>
+            <li><a href="./about" title="">04 : About</a></li>
+            <li><a href="./contact" title="">05 : Contact</a></li>
+            <li><a href="https://ventures.tmitchmachine.com" title="">06 : Ventures</a></li>
+            <li><a href="./media" title="">07 : Media</a></li>
+            <li><a href="https://music.tmitchmachine.com" title="">08 : Music</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="section-container">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 col-sm-offset-2 section-container-spacer">
+          <div class="text-center">
+            <h1 class="h2">07 : Media</h1>
+            <p>Connect with Travis Mitchell across social channels.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-6 col-md-3">
+          <a class="media-card" href="https://www.linkedin.com/in/travis-mitchell-tmitchmachine" target="_blank"
+            rel="noopener noreferrer">
+            <div class="media-icon"><i class="fa fa-linkedin"></i></div>
+            <h4>LinkedIn</h4>
+            <span class="btn btn-default btn-sm">Open</span>
+          </a>
+        </div>
+
+        <div class="col-sm-6 col-md-3">
+          <a class="media-card" href="https://www.youtube.com/channel/UCNLZ0IvNxUWLCCa2UsnXlDA" target="_blank"
+            rel="noopener noreferrer">
+            <div class="media-icon"><i class="fa fa-youtube-play"></i></div>
+            <h4>YouTube</h4>
+            <span class="btn btn-default btn-sm">Open</span>
+          </a>
+        </div>
+
+        <div class="col-sm-6 col-md-3">
+          <a class="media-card" href="https://www.tiktok.com/@tmitchmachine" target="_blank" rel="noopener noreferrer">
+            <div class="media-icon"><i class="fa fa-music"></i></div>
+            <h4>TikTok</h4>
+            <span class="btn btn-default btn-sm">Open</span>
+          </a>
+        </div>
+
+        <div class="col-sm-6 col-md-3">
+          <a class="media-card" href="https://www.instagram.com/tmitchmachine/" target="_blank"
+            rel="noopener noreferrer">
+            <div class="media-icon"><i class="fa fa-instagram"></i></div>
+            <h4>Instagram</h4>
+            <span class="btn btn-default btn-sm">Open</span>
+          </a>
+        </div>
+
+        <div class="col-sm-6 col-md-3">
+          <a class="media-card" href="https://www.facebook.com/tmitchmachine/" target="_blank"
+            rel="noopener noreferrer">
+            <div class="media-icon"><i class="fa fa-facebook"></i></div>
+            <h4>Facebook</h4>
+            <span class="btn btn-default btn-sm">Open</span>
+          </a>
+        </div>
+
+        <div class="col-sm-6 col-md-3">
+          <a class="media-card" href="https://x.com/tmitchmachine" target="_blank" rel="noopener noreferrer">
+            <div class="media-icon"><i class="fa fa-twitter"></i></div>
+            <h4>X (Twitter)</h4>
+            <span class="btn btn-default btn-sm">Open</span>
+          </a>
+        </div>
+
+        <div class="col-sm-6 col-md-3">
+          <a class="media-card" href="https://www.snapchat.com/@tmitchmachine" target="_blank"
+            rel="noopener noreferrer">
+            <div class="media-icon"><i class="fa fa-snapchat-ghost"></i></div>
+            <h4>Snapchat</h4>
+            <span class="btn btn-default btn-sm">Open</span>
+          </a>
+        </div>
+
+        <div class="col-sm-6 col-md-3">
+          <a class="media-card" href="https://linktr.ee/tmitchmachine" target="_blank" rel="noopener noreferrer">
+            <div><img class="media-logo" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linktree.svg" alt="Linktree logo"></div>
+            <h4>Linktree</h4>
+            <span class="btn btn-default btn-sm">Open</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function (event) {
+      navActivePage();
+    });
+  </script>
+
+  <script type="text/javascript" src="./static/main.70a66962.js"></script>
+</body>
+
+</html>
+
