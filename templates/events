@@ -40,13 +40,12 @@
         <div class="collapse navbar-collapse" id="navbar-collapse">
           <ul class="nav navbar-nav ">
             <li><a href="./home" title="">01 : Home</a></li>
-            <li><a href="./deals" title="">02 : Deals</a></li>
-            <li><a href="./events" title="">03 : Events</a></li>
-            <li><a href="./about" title="">04 : About</a></li>
-            <li><a href="./contact" title="">05 : Contact</a></li>
-            <li><a href="https://ventures.tmitchmachine.com" title="">06 : Ventures</a></li>
-            <li><a href="./media" title="">07 : Media</a></li>
-            <li><a href="https://music.tmitchmachine.com" title="">08 : Music</a></li>
+            <li><a href="./highlights" title="">02 : Highlights</a></li>
+            <li><a href="./about" title="">03 : About</a></li>
+            <li><a href="./contact" title="">04 : Contact</a></li>
+            <li><a href="https://ventures.tmitchmachine.com" title="">05 : Ventures</a></li>
+            <li><a href="./media" title="">06 : Media</a></li>
+            <li><a href="https://music.tmitchmachine.com" title="">07 : Music</a></li>
           </ul>
         </div>
       </div>
