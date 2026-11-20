@@ -1,0 +1,45 @@
+export default function EventsPage() {
+  return (
+    <>
+      <div className="section-container">
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-8 col-sm-offset-2 section-container-spacer">
+              <div className="text-center">
+                <h1 className="h2">03 : Events</h1>
+                <p>Public Speaking Engagements</p>
+              </div>
+            </div>
+            <div className="col-md-12">
+              <div id="myCarousel" className="carousel slide projects-carousel">
+                <div className="carousel-inner">
+                  <div className="item active">
+                    <div className="row">
+                      <div className="col-sm-4">
+                        <a href="./events001" title="" className="black-image-project-hover">
+                          {" "}
+                          <img src="./static/assets/images/fresh_fire.jpg" alt="" className="img-responsive" />
+                          {" "}
+                        </a>
+                        {" "}
+                        <div className="card-container card-container-lg">
+                          <h4>July 22nd 2023</h4>
+                          <h3>Fresh Fire Conference</h3>
+                          <p>Spoke at Salvation Army sharing the mission behind Heavenya.</p>
+                          {" "}
+                          <a href="./events001" title="" className="btn btn-default">More</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {" "}
+          {" "}
+        </div>
+      </div>
+    </>
+  );
+}

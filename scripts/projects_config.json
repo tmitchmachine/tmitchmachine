@@ -1,0 +1,32 @@
+{
+  "owner": "tmitchmachine",
+  "exclude": ["env_backups"],
+  "exclude_containing": ["secretinfo"],
+  "no_link": ["flask-alt-text-generator", "flask_vercel_test_deployment"],
+  "links": {
+    "returnstateteam": "https://team.returnstate.com",
+    "heavenya_webapp_next": "https://heavenya.com",
+    "pinmia": "https://www.pinmia.com",
+    "newlivingstyle_promo": "https://promo.newlivingstyle.com",
+    "teywin": "https://teywin.com",
+    "heavenya_webapp_svelte": "https://events.heavenya.com/",
+    "heavenya_data": "https://data.heavenya.org",
+    "heavenya_connect_web": "https://connect.heavenya.com",
+    "heavenya_admin_next": "https://admin.heavenya.com",
+    "returnstate": "https://www.returnstate.com",
+    "hushpuppy": "https://hushpuppy.returnstate.com",
+    "reimagine": "https://reimagine.returnstate.com",
+    "returnstatelearn": "https://learn.returnstate.com",
+    "figma-react-blur": "https://figma-react-blur.iamelimars.vercel.app"
+  },
+  "apps": {
+    "heavenya": {
+      "ios": "https://apps.apple.com/us/app/heavenya-christian-fellowship/id1498340882",
+      "android": "https://play.google.com/store/apps/details?id=com.faithful.heavenya"
+    },
+    "genplan": {
+      "ios": "https://apps.apple.com/us/app/genplan/id6739147626",
+      "android": "https://play.google.com/store/apps/details?id=org.heavenya.genplan"
+    }
+  }
+}

@@ -70,11 +70,13 @@
               <li><a href="https://heavenya.org" target="_blank" rel="noopener">Heavenya</a> <span class="project-tag">Google Sites</span></li>
               <li><a href="https://sites.google.com/view/starby1/home" target="_blank" rel="noopener">Starby</a> <span class="project-tag">Google Sites</span></li>
               <li><a href="https://musicisvivid.com/" target="_blank" rel="noopener">Music Is Vivid</a> <span class="project-tag">Offshore developed</span></li>
+              <li><a href="https://www.smartsizeadu.com/" target="_blank" rel="noopener">SmartSize ADU</a> <span class="project-tag">ClickFunnels</span></li>
           </ul>
 
           <h3>All Repositories</h3>
           <p><small>Sorted by commit count. Linked where the project has a live website.</small></p>
           <ol class="projects-list">
+              <!-- REPOS:START -->
               <li>ironflowlive <small>&middot; 2057 commits &middot; private</small></li>
               <li>heavenya <small>&middot; 1814 commits &middot; private</small> <a class="project-tag" href="https://apps.apple.com/us/app/heavenya-christian-fellowship/id1498340882" target="_blank" rel="noopener">iOS</a><a class="project-tag" href="https://play.google.com/store/apps/details?id=com.faithful.heavenya" target="_blank" rel="noopener">Android</a></li>
               <li>genplan <small>&middot; 529 commits &middot; private</small> <a class="project-tag" href="https://apps.apple.com/us/app/genplan/id6739147626" target="_blank" rel="noopener">iOS</a><a class="project-tag" href="https://play.google.com/store/apps/details?id=org.heavenya.genplan" target="_blank" rel="noopener">Android</a></li>
@@ -82,12 +84,12 @@
               <li><a href="https://heavenya.com" target="_blank" rel="noopener">heavenya_webapp_next</a> <small>&middot; 239 commits &middot; private</small></li>
               <li><a href="https://www.pinmia.com" target="_blank" rel="noopener">pinmia</a> <small>&middot; 186 commits &middot; private</small></li>
               <li><a href="https://promo.newlivingstyle.com" target="_blank" rel="noopener">newlivingstyle_promo</a> <small>&middot; 121 commits &middot; private</small></li>
-              <li><a href="https://newlivingstyle-admin.vercel.app" target="_blank" rel="noopener">newlivingstyle_admin</a> <small>&middot; 107 commits &middot; private</small></li>
-              <li><a href="https://events.heavenya.com/" target="_blank" rel="noopener">heavenya_webapp_svelte</a> <small>&middot; 104 commits &middot; private</small></li>
+              <li><a href="https://admin.newlivingstyle.com" target="_blank" rel="noopener">newlivingstyle_admin</a> <small>&middot; 107 commits &middot; private</small></li>
+              <li><a href="https://events.heavenya.com" target="_blank" rel="noopener">heavenya_webapp_svelte</a> <small>&middot; 104 commits &middot; private</small></li>
               <li><a href="https://teywin.com" target="_blank" rel="noopener">teywin</a> <small>&middot; 101 commits &middot; private</small></li>
               <li>genplan_old_2 <small>&middot; 76 commits &middot; public</small></li>
               <li>rtt <small>&middot; 75 commits &middot; private</small></li>
-              <li><a href="https://tmitchmachine.com" target="_blank" rel="noopener">tmitchmachine</a> <small>&middot; 63 commits &middot; public</small></li>
+              <li><a href="https://tmitchmachine.com" target="_blank" rel="noopener">tmitchmachine</a> <small>&middot; 64 commits &middot; public</small></li>
               <li><a href="https://landslide-analysis-theta.vercel.app" target="_blank" rel="noopener">landslide_analysis</a> <small>&middot; 52 commits &middot; private</small></li>
               <li><a href="https://data.heavenya.org" target="_blank" rel="noopener">heavenya_data</a> <small>&middot; 49 commits &middot; private</small></li>
               <li><a href="https://connect.heavenya.com" target="_blank" rel="noopener">heavenya_connect_web</a> <small>&middot; 46 commits &middot; private</small></li>
@@ -104,16 +106,16 @@
               <li>cubstart_web <small>&middot; 14 commits &middot; private</small></li>
               <li><a href="https://returnstateproperty.vercel.app" target="_blank" rel="noopener">returnstateproperty</a> <small>&middot; 13 commits &middot; public</small></li>
               <li>dealflow <small>&middot; 11 commits &middot; public</small></li>
-              <li><a href="https://ironflow.vercel.app" target="_blank" rel="noopener">ironflow</a> <small>&middot; 10 commits &middot; private</small></li>
-              <li><a href="https://stock-analysis-app-gamma.vercel.app" target="_blank" rel="noopener">stock-analysis-app</a> <small>&middot; 10 commits &middot; private</small></li>
+              <li><a href="https://ironflow.returnstate.com" target="_blank" rel="noopener">ironflow</a> <small>&middot; 10 commits &middot; private</small></li>
+              <li><a href="https://stockanalysisapp.returnstate.com" target="_blank" rel="noopener">stock-analysis-app</a> <small>&middot; 10 commits &middot; private</small></li>
               <li>crawler <small>&middot; 9 commits &middot; private</small></li>
               <li>intro-to-react-and-firebase <small>&middot; 9 commits &middot; private</small></li>
               <li>automation <small>&middot; 8 commits &middot; private</small></li>
               <li>ironflowmini <small>&middot; 8 commits &middot; private</small></li>
               <li><a href="https://landingpages-mu-blush.vercel.app" target="_blank" rel="noopener">landingpages</a> <small>&middot; 8 commits &middot; private</small></li>
               <li>wemixmusic <small>&middot; 7 commits &middot; private</small></li>
+              <li><a href="https://aiavatar-delta.vercel.app" target="_blank" rel="noopener">aiavatar</a> <small>&middot; 6 commits &middot; private</small></li>
               <li><a href="https://figma-react-blur.iamelimars.vercel.app" target="_blank" rel="noopener">figma-react-blur</a> <small>&middot; 6 commits &middot; public</small></li>
-              <li><a href="https://aiavatar-delta.vercel.app" target="_blank" rel="noopener">aiavatar</a> <small>&middot; 4 commits &middot; private</small></li>
               <li>newlivingstyle <small>&middot; 4 commits &middot; private</small></li>
               <li>tourpicks <small>&middot; 4 commits &middot; private</small></li>
               <li>david <small>&middot; 3 commits &middot; private</small></li>
@@ -163,6 +165,7 @@
               <li>widget-playground-flutter-course <small>&middot; 1 commit &middot; private</small></li>
               <li>my_first_app_potentially <small>&middot; 0 commits &middot; private</small></li>
               <li>react-app <small>&middot; 0 commits &middot; private</small></li>
+              <!-- REPOS:END -->
           </ol>
         </div>
       </div>
