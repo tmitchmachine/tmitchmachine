@@ -1,107 +1,91 @@
-# Returning
+# T Mitch Machine
 
-## Running On Local
-`FLASK_APP=main FLASK_ENV=development flask run`
+Source for [tmitchmachine.com](https://tmitchmachine.com), a personal site built with Next.js (App Router), React and TypeScript.
 
-## Deploying
-`export FLASK_APP=main && export FLASK_ENV=production && gcloud init && gcloud app deploy`
+## Run locally
 
+```bash
+npm install
+npm run dev
+```
 
+Then open <http://localhost:3000>.
 
+To check a production build:
 
+```bash
+npm run build
+npm start
+```
 
+## Project layout
 
-# First Timer
-## Installation process:
+| Path | What's there |
+| --- | --- |
+| `app/(home)/` | The home page |
+| `app/(site)/` | Every other page: about, contact, highlights, projects, media, deals, events |
+| `components/` | Shared page shell: `SiteDocument`, `SiteHeader`, `SiteScripts` |
+| `lib/projects.ts` | Data for the `/projects` page: the `SITES` list and the `REPOS` list |
+| `public/static/` | The theme's compiled CSS and JS, plus images |
+| `scripts/` | The script that refreshes the repo list on `/projects` |
 
-1. `clone he project from https://github.com/tmitchmachine/mitch_deal.git`
-2. `cd tmitchmachine`
- 
- ## (Solved because of settings.json)
-<!-- 3. `python3 -m venv venv`
-4. `. venv/bin/activate` on MacOS and Linux `venv\Scripts\activate` on Windows
-5. `pip install -r requirements.txt` -->
- 
- ## Running On Local
-6. `export FLASK_APP=main`
-7. `export FLASK_ENV=development`
-8. `flask run`
+To add or edit a page, change the matching `page.tsx` under `app/`. Navigation links live in `components/SiteHeader.tsx`.
 
+## Projects page
 
-## Pre Deployment New Terminal (Solved because of settings.json)
-<!-- 1. `. venv/bin/activate` on MacOS and Linux `venv\Scripts\activate` on Windows
-2. `python -V` to see version inside /app.yaml and convert it Python 3.12.1 = runtime: python310 -->
+`lib/projects.ts` has two lists:
 
-## Deployment Official
-1. `export FLASK_APP=main`
-2. `export FLASK_ENV=production`
-3. `gcloud init` Select Switch to and re-initialize existing configuration: [default]
-4. `gcloud app deploy`
+- **`SITES`**: edited by hand. Add sites built on other platforms (Shopify, Google Sites and so on) here.
+- **`REPOS`**: generated. Don't edit it by hand, because the next update overwrites it.
 
-## Optional If Slow Deployment
-1. `gcloud components update`
+### How `REPOS` updates
 
-# Installing Google Cloud
-https://cloud.google.com/sdk/docs/install
+[`.github/workflows/update-projects.yml`](.github/workflows/update-projects.yml) runs [`scripts/update_projects.py`](scripts/update_projects.py) daily at 14:00 UTC. You can also start it from the repo's **Actions** tab with **Run workflow**. Each run:
 
-# Video Deployment Reference
-https://www.youtube.com/watch?v=_OqxXjiASDI
+1. Lists every repo owned by `tmitchmachine` and counts the commits on its default branch.
+2. Picks a link for each repo, using the first of these it finds:
+   1. a manual link in `scripts/projects_config.json`;
+   2. a custom domain on the repo's Vercel project;
+   3. the repo's GitHub "homepage" field;
+   4. the repo's `*.vercel.app` address.
+3. Rewrites `REPOS`, sorted by commit count, and commits `lib/projects.ts` if anything changed. A change to this repo's own commit count doesn't count, because otherwise every update commit would trigger another one the next day.
 
-## website URL:
-https://tmitchmachine.com
+New repos appear automatically, **including private ones, by name**. To keep a repo off the page, add it to `exclude` in the config.
 
+### Config: `scripts/projects_config.json`
 
-## Creating A Project
-`gcloud projects create project name`
+| Key | Purpose |
+| --- | --- |
+| `exclude` | Repo names to leave off the page |
+| `exclude_containing` | Leave off any repo whose name contains one of these strings (e.g. `secretinfo`) |
+| `links` | Manual links. These win over anything detected automatically. |
+| `no_link` | Repos that should never get a link, e.g. ones whose site is gone |
+| `apps` | App Store and Google Play links, shown as `iOS` / `Android` tags |
 
+### Secrets
 
-<!-- Everything below no longer used
+Add these under **Settings → Secrets and variables → Actions**:
 
-## Pre Deployment New Terminal
-3. `pip freeze > requirements.txt` make sure sure .txt is correct  
+| Secret | Required | Notes |
+| --- | --- | --- |
+| `GH_STATS_TOKEN` | Yes | A fine-grained GitHub token with **Repository access: All repositories** and **Contents: Read-only**. Without access to private repos, the script stops and changes nothing. |
+| `VERCEL_TOKEN` | No | Lets the script find live sites on Vercel. Without it, links come only from the config file and GitHub homepage fields. |
 
-#Deployment From GCP
-1. `git clone https://github.com/tmitch777/mitch_deal`
-2. cd mitch_deal
-3. docker build -t mitch_deal .
-4. docker tag mitch_deal:latest gcr.io/mitch-deal/mitch_deal:latest
-5. gcloud auth configure-docker
-6. docker push gcr.io/mitch-deal/mitch_deal:latest
-7. gcloud run deploy mitchdeal-service --image gcr.io/mitch-deal/mitch_deal:latest --platform managed --region us-central1
+### Run it locally
 
+Put both tokens in `.env`, which is gitignored, then run:
 
+```bash
+set -a && . ./.env && set +a
+python3 scripts/update_projects.py
+```
 
-# Builds & Deploys
-1. `gcloud builds submit --tag gcr.io/mitch-deal/mitch_deal`
-2. `gcloud run deploy --image gcr.io/mitch-deal/mitch_deal`
+The script uses only the Python standard library. On macOS, if you get `CERTIFICATE_VERIFY_FAILED`, run it with `/usr/bin/python3`, or run **Install Certificates.command** from your python.org Python folder.
 
+## Deployment
 
+The site is moving to a Next.js host such as Vercel. Once it's deployed there, point the `tmitchmachine.com` and `www.tmitchmachine.com` DNS records at the new host. Both still point at Google App Engine.
 
-# Docker image setup
-0.`docker login`
-1. `docker tag mitchdealimage:v1 gcr.io/mitch-deal/mitchdealimage:v1`
-2. `gcloud auth configure-docker`
-3. `docker push gcr.io/mitch-deal/mitchdealimage:v1`
-4. `gcloud run deploy mitchdeal-service --image gcr.io/mitch-deal/mitch_deal:latest --platform managed --region us-central1`
+## Legacy Flask app
 
-
-
-
-# Extra
-2. `docker build -t mitchdealimage:v1 .`
-3. `docker push mitchdealimage:v1`
-
-
-https://mitchdeal-service-iw27pgmcoq-uc.a.run.app
-
-
-
-# Authenticate Docker with your Google Cloud credentials
-4. `gcloud auth configure-docker`
-
-# Tag the Docker image with the GCR repository URL
-5. `docker tag mitchdealimage:v1 us-central1-docker.pkg.dev/mitch-deal/mitchdealimage:v1`
-
-# Push the tagged Docker image to GCR
-6. `docker push us-central1-docker.pkg.dev/mitch-deal/mitchdealimage:v1`
- -->
+`main.py`, `templates/`, `app.yaml`, `requirements.txt` and `database.csv` belong to the earlier Flask version, which ran on Google App Engine. Billing for that Google Cloud project was turned off in November 2026, and the files are kept only for reference. The Next.js app doesn't use them.

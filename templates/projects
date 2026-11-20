@@ -76,7 +76,6 @@
           <h3>All Repositories</h3>
           <p><small>Sorted by commit count. Linked where the project has a live website.</small></p>
           <ol class="projects-list">
-              <!-- REPOS:START -->
               <li>ironflowlive <small>&middot; 2057 commits &middot; private</small></li>
               <li>heavenya <small>&middot; 1814 commits &middot; private</small> <a class="project-tag" href="https://apps.apple.com/us/app/heavenya-christian-fellowship/id1498340882" target="_blank" rel="noopener">iOS</a><a class="project-tag" href="https://play.google.com/store/apps/details?id=com.faithful.heavenya" target="_blank" rel="noopener">Android</a></li>
               <li>genplan <small>&middot; 529 commits &middot; private</small> <a class="project-tag" href="https://apps.apple.com/us/app/genplan/id6739147626" target="_blank" rel="noopener">iOS</a><a class="project-tag" href="https://play.google.com/store/apps/details?id=org.heavenya.genplan" target="_blank" rel="noopener">Android</a></li>
@@ -165,7 +164,6 @@
               <li>widget-playground-flutter-course <small>&middot; 1 commit &middot; private</small></li>
               <li>my_first_app_potentially <small>&middot; 0 commits &middot; private</small></li>
               <li>react-app <small>&middot; 0 commits &middot; private</small></li>
-              <!-- REPOS:END -->
           </ol>
         </div>
       </div>

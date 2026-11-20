@@ -1,4 +1,7 @@
-"""Rebuild the "All Repositories" list in templates/projects from the GitHub API.
+"""Rebuild the REPOS list in lib/projects.ts (the /projects page) from the GitHub API.
+
+Only the `export const REPOS: Repo[] = [ ... ];` block is rewritten; SITES and the
+rest of the file stay hand-edited.
 
 Link for each repo, first match wins:
   1. "links" in scripts/projects_config.json (manual override)
@@ -14,7 +17,6 @@ Env:
 Usage: python scripts/update_projects.py
 """
 
-import html
 import json
 import os
 import re
@@ -24,11 +26,9 @@ import urllib.parse
 import urllib.request
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-TEMPLATE = os.path.join(ROOT, "templates", "projects")
+TARGET = os.path.join(ROOT, "lib", "projects.ts")
 CONFIG = os.path.join(ROOT, "scripts", "projects_config.json")
-START = "<!-- REPOS:START -->"
-END = "<!-- REPOS:END -->"
-INDENT = "              "
+REPOS_BLOCK = re.compile(r"(export const REPOS: Repo\[\] = \[\n)(.*?)(\n\];)", re.S)
 
 
 def request(url, token, auth_scheme="Bearer"):
@@ -108,6 +108,8 @@ def normalize(url):
 
 
 def render(repos, config, vercel):
+    """One TypeScript object literal per repo, matching the Repo type in lib/projects.ts."""
+    s = json.dumps  # JSON strings are valid TypeScript string literals
     lines = []
     for repo in repos:
         name = repo["name"]
@@ -115,17 +117,17 @@ def render(repos, config, vercel):
         url = normalize(config.get("links", {}).get(name) or custom or repo.get("homepage") or vercel_app)
         if name in config.get("no_link", []):
             url = None
-        label = html.escape(name)
+        fields = [f"name: {s(name)}", f"commits: {repo['commits']}", f"private: {'true' if repo['private'] else 'false'}"]
         if url:
-            label = f'<a href="{html.escape(url)}" target="_blank" rel="noopener">{label}</a>'
-        n = repo["commits"]
-        meta = f'<small>&middot; {n} commit{"" if n == 1 else "s"} &middot; {"private" if repo["private"] else "public"}</small>'
+            fields.append(f"website: {s(url)}")
         apps = config.get("apps", {}).get(name, {})
-        tags = "".join(
-            f'<a class="project-tag" href="{html.escape(apps[key])}" target="_blank" rel="noopener">{text}</a>'
-            for key, text in (("ios", "iOS"), ("android", "Android")) if apps.get(key)
-        )
-        lines.append(f"{INDENT}<li>{label} {meta}{' ' + tags if tags else ''}</li>")
+        app_links = [
+            f"{{ label: {s(label)}, url: {s(apps[key])} }}"
+            for key, label in (("ios", "iOS"), ("android", "Android")) if apps.get(key)
+        ]
+        if app_links:
+            fields.append(f"apps: [{', '.join(app_links)}]")
+        lines.append(f"  {{ {', '.join(fields)} }},")
     return "\n".join(lines)
 
 
@@ -139,7 +141,7 @@ def main():
     all_repos = github_repos(token, config["owner"])
     if not any(r["private"] for r in all_repos):
         sys.exit("GH_STATS_TOKEN can't see any private repos. Set its Repository access to "
-                 "'All repositories' with read-only Contents. Page left unchanged.")
+                 "'All repositories' with read-only Contents. lib/projects.ts left unchanged.")
 
     excluded = set(config.get("exclude", []))
     containing = config.get("exclude_containing", [])
@@ -153,18 +155,26 @@ def main():
 
     vercel = vercel_links(os.environ["VERCEL_TOKEN"]) if os.environ.get("VERCEL_TOKEN") else {}
 
-    with open(TEMPLATE) as f:
-        page = f.read()
-    if START not in page or END not in page:
-        sys.exit(f"{TEMPLATE} is missing the {START} / {END} markers")
-    before, rest = page.split(START, 1)
-    after = rest.split(END, 1)[1]
-    updated = f"{before}{START}\n{render(repos, config, vercel)}\n{INDENT}{END}{after}"
+    with open(TARGET) as f:
+        source = f.read()
+    if not REPOS_BLOCK.search(source):
+        sys.exit(f"Couldn't find `export const REPOS: Repo[] = [ ... ];` in {TARGET}")
+    body = render(repos, config, vercel)
+    updated = REPOS_BLOCK.sub(lambda m: m.group(1) + body + m.group(3), source, count=1)
 
-    if updated != page:
-        with open(TEMPLATE, "w") as f:
+    # Each update is a commit to this repo, which bumps this repo's own count and would
+    # trigger another commit on the next run, forever. Skip runs where that's the only change.
+    self_repo = os.environ.get("GITHUB_REPOSITORY", "").split("/")[-1]
+    if self_repo:
+        def without_self(text):
+            return [l for l in text.splitlines() if f'name: {json.dumps(self_repo)},' not in l]
+        if without_self(updated) == without_self(source):
+            updated = source
+
+    if updated != source:
+        with open(TARGET, "w") as f:
             f.write(updated)
-        print(f"Updated {len(repos)} repos in templates/projects")
+        print(f"Updated {len(repos)} repos in lib/projects.ts")
     else:
         print("No changes")
 
