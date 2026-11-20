@@ -76,15 +76,15 @@
           <p><small>Sorted by commit count. Linked where the project has a live website.</small></p>
           <ol class="projects-list">
               <li>ironflowlive <small>&middot; 2057 commits &middot; private</small></li>
-              <li>heavenya <small>&middot; 1814 commits &middot; private</small></li>
-              <li>genplan <small>&middot; 529 commits &middot; private</small></li>
+              <li>heavenya <small>&middot; 1814 commits &middot; private</small> <a class="project-tag" href="https://apps.apple.com/us/app/heavenya-christian-fellowship/id1498340882" target="_blank" rel="noopener">iOS</a><a class="project-tag" href="https://play.google.com/store/apps/details?id=com.faithful.heavenya" target="_blank" rel="noopener">Android</a></li>
+              <li>genplan <small>&middot; 529 commits &middot; private</small> <a class="project-tag" href="https://apps.apple.com/us/app/genplan/id6739147626" target="_blank" rel="noopener">iOS</a><a class="project-tag" href="https://play.google.com/store/apps/details?id=org.heavenya.genplan" target="_blank" rel="noopener">Android</a></li>
               <li><a href="https://returnstateteam.vercel.app" target="_blank" rel="noopener">returnstateteam</a> <small>&middot; 489 commits &middot; private</small></li>
               <li><a href="https://heavenya-webapp-next.vercel.app" target="_blank" rel="noopener">heavenya_webapp_next</a> <small>&middot; 239 commits &middot; private</small></li>
               <li><a href="https://instaplan-khaki.vercel.app" target="_blank" rel="noopener">pinmia</a> <small>&middot; 186 commits &middot; private</small></li>
               <li><a href="https://newlivingstyle-promo.vercel.app" target="_blank" rel="noopener">newlivingstyle_promo</a> <small>&middot; 121 commits &middot; private</small></li>
               <li><a href="https://newlivingstyle-admin.vercel.app" target="_blank" rel="noopener">newlivingstyle_admin</a> <small>&middot; 107 commits &middot; private</small></li>
               <li><a href="https://events.heavenya.com/" target="_blank" rel="noopener">heavenya_webapp_svelte</a> <small>&middot; 104 commits &middot; private</small></li>
-              <li><a href="https://teywin.vercel.app" target="_blank" rel="noopener">teywin</a> <small>&middot; 101 commits &middot; private</small></li>
+              <li><a href="https://teywin.com" target="_blank" rel="noopener">teywin</a> <small>&middot; 101 commits &middot; private</small></li>
               <li>genplan_old_2 <small>&middot; 76 commits &middot; public</small></li>
               <li>rtt <small>&middot; 75 commits &middot; private</small></li>
               <li><a href="https://tmitchmachine.com" target="_blank" rel="noopener">tmitchmachine</a> <small>&middot; 63 commits &middot; public</small></li>
