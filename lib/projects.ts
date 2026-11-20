@@ -10,8 +10,8 @@ export const SITES: Site[] = [
   { name: "New Living Style", url: "https://newlivingstyle.com", tag: "Shopify" },
   { name: "Heavenya", url: "https://heavenya.org", tag: "Google Sites" },
   { name: "Starby", url: "https://sites.google.com/view/starby1/home", tag: "Google Sites" },
-  { name: "Music Is Vivid", url: "https://musicisvivid.com/", tag: "Offshore developed" },
-  { name: "SmartSize ADU", url: "https://www.smartsizeadu.com/", tag: "ClickFunnels" },
+  { name: "Music is Vivid", url: "https://musicisvivid.com/", tag: "Offshore developed" },
+  { name: "Smart Size ADU", url: "https://www.smartsizeadu.com/", tag: "ClickFunnels" },
 ];
 
 export const REPOS: Repo[] = [
