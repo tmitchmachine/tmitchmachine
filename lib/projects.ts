@@ -15,7 +15,7 @@ export const SITES: Site[] = [
 ];
 
 export const REPOS: Repo[] = [
-  { name: "ironflowlive", commits: 2057, private: true },
+  { name: "ironflowlive", commits: 2058, private: true },
   { name: "heavenya", commits: 1814, private: true, apps: [{ label: "iOS", url: "https://apps.apple.com/us/app/heavenya-christian-fellowship/id1498340882" }, { label: "Android", url: "https://play.google.com/store/apps/details?id=com.faithful.heavenya" }] },
   { name: "genplan", commits: 529, private: true, apps: [{ label: "iOS", url: "https://apps.apple.com/us/app/genplan/id6739147626" }, { label: "Android", url: "https://play.google.com/store/apps/details?id=org.heavenya.genplan" }] },
   { name: "returnstateteam", commits: 489, private: true, website: "https://team.returnstate.com" },
@@ -27,7 +27,7 @@ export const REPOS: Repo[] = [
   { name: "teywin", commits: 101, private: true, website: "https://teywin.com" },
   { name: "genplan_old_2", commits: 76, private: false },
   { name: "rtt", commits: 75, private: true },
-  { name: "tmitchmachine", commits: 64, private: false, website: "https://tmitchmachine.com" },
+  { name: "tmitchmachine", commits: 71, private: false, website: "https://tmitchmachine.com" },
   { name: "landslide_analysis", commits: 52, private: true, website: "https://landslide-analysis-theta.vercel.app" },
   { name: "heavenya_data", commits: 49, private: true, website: "https://data.heavenya.org" },
   { name: "heavenya_connect_web", commits: 46, private: true, website: "https://connect.heavenya.com" },
